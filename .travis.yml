@@ -5,10 +5,10 @@ language: python
 python:
  - pypy3
  - pypy
- - 2.7
- - 3.6
- - 3.5
- - 3.4
+ - "2.7"
+ - "3.6"
+ - "3.5"
+ - "3.4"
 
 sudo: false
 
