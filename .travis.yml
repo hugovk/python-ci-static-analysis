@@ -14,11 +14,13 @@ sudo: false
 
 install:
  - pip install pyflakes pycodestyle
+ - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then pip install black flake8; fi
 
 script:
  # Static analysis
  - pyflakes .
  - pycodestyle --statistics --count .
+ - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then black --check --diff .; fi
 
 matrix:
   fast_finish: true
