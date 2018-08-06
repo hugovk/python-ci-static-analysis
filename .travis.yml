@@ -14,7 +14,7 @@ sudo: false
 
 install:
  - pip install pyflakes pycodestyle
- - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then pip install black flake8; fi
+ - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then pip install black; fi
 
 script:
  # Static analysis
