@@ -16,11 +16,11 @@ matrix:
 sudo: false
 
 install:
- - pip install pyflakes pycodestyle
- - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then pip install black; fi
+ - pip install -U pip
+ - pip install -U flake8
+ - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then pip install -U black; fi
 
 script:
  # Static analysis
- - pyflakes .
- - pycodestyle --statistics --count .
+ - flake8 --statistics --count
  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then black --check --diff .; fi
