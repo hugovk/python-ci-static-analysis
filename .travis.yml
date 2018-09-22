@@ -1,4 +1,6 @@
 language: python
+cache: pip
+sudo: false
 
 # Supported CPython versions:
 # https://en.wikipedia.org/wiki/CPython#Version_history
@@ -12,8 +14,6 @@ matrix:
     - python: 3.5
     - python: 3.4
     - python: 2.7
-
-sudo: false
 
 install:
  - pip install -U pip
