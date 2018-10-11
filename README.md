@@ -13,7 +13,7 @@ Static analysis on Travis CI for Python projects
 ```bash
 wget https://raw.githubusercontent.com/hugovk/python-ci-static-analysis/master/.flake8
 wget https://raw.githubusercontent.com/hugovk/python-ci-static-analysis/master/.travis.yml
-git add .travis.yml && git commit -m "Run static analysis on Travis CI (https://github.com/hugovk/python-ci-static-analysis)"
+git add .flake8 .travis.yml && git commit -m "Run static analysis on Travis CI (https://github.com/hugovk/python-ci-static-analysis)"
 ```
 
 4. Push a commit to your repo, and Travis CI will run the static analysis
